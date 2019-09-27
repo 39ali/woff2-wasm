@@ -1,0 +1,13 @@
+ #!/bin/bash
+
+
+ OUTPUT="$(sudo emcc --bind  "woff2_dec.cpp" \
+   "woff2/src/woff2_dec.cc"  "woff2/src/variable_length.cc" \
+   "woff2/src/woff2_common.cc" "woff2/src/woff2_out.cc" "woff2/src/table_tags.cc"  \
+  "woff2/brotli/c/dec/huffman.c"  "woff2/brotli/c/dec/bit_reader.c" "woff2/brotli/c/dec/decode.c" "woff2/brotli/c/dec/state.c" \
+   "woff2/brotli/c/common/dictionary.c" "woff2/brotli/c/common/transform.c" \
+  -I/Users/alimilhim/dev/woff2-wasm/woff2/include/ \
+   -I/Users/alimilhim/dev/woff2-wasm/woff2/brotli/c/include/  \
+  -o wofftwo.js  -Os -s STRICT=1 -s ALLOW_MEMORY_GROWTH=1  -s MALLOC=emmalloc \
+   -s MODULARIZE=1 -s EXPORT_ES6=1  -s ASSERTIONS=1 -s ENVIRONMENT=web -s EXTRA_EXPORTED_RUNTIME_METHODS='["ccall", "cwrap","stringToUTF8"]' -s ERROR_ON_UNDEFINED_SYMBOLS=0)"
+echo "${OUTPUT}"

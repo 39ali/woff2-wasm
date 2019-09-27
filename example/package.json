@@ -1,0 +1,21 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "build:watch": "npm run build -- --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "exports-loader": "^0.7.0",
+    "file-loader": "^4.2.0",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.8",
+    "webpack-encoding-plugin": "^0.3.1"
+  }
+}

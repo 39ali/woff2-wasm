@@ -16,7 +16,7 @@ const convertFromVecToUint8arr=(vec)=>{
         ttfarr.push(vec.get(i))
 
     }
-    return new Uint8Array(ttfarr)
+    return new Uint8Array(ttfarr);
 }
 
 module.onRuntimeInitialized = () => {

@@ -33,10 +33,6 @@ std::vector<unsigned char> woff2_dec(string woff2buf, size_t bufSize)
     {
         printf("somthing went wrong!\n");
     }
-
- woff2::SetFileContents("arial2.ttf", output.begin(),
-        output.begin() + out.Size());
-
     const std::vector<uint8_t> charvect(output.begin(), output.begin() + out.Size());
   
     return charvect;

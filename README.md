@@ -1,8 +1,8 @@
 # woff2-wasm
 WebAssembly build of woff2
 
-- this version works on the web , look at the example folder that uses webpack and node's modules 
-
+- this version works on the web , look at the example folder that uses webpack and node's modules .
+- this only supports converting from woff2 to ttf for now .
 Example
 --------
 ```js
